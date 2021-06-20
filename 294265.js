@@ -18,16 +18,16 @@ let timeList = [];
 for ( let i = 0; i < dateList.length; i++ ) {
     const _date = dateList[i];
     const _time = new Date( _date ).getTime(); 
-    
+
     timeList.push( _time );
 }
 
 const now = new Date().getTime();
-const sec = 1000; 
-const min = sec * 60; 
-const hour = min * 60; 
-const day = hour * 24; 
-const weekly = day * 7; 
+const second = 1000; 
+const minute = second * 60; 
+const hours = minute * 60; 
+const day = hours * 24; 
+const week = day * 7; 
 const month = day * 30; 
 const year = day * 365; 
 
@@ -41,8 +41,8 @@ for ( let i = 0; i < timeList.length; i++ ) {
         continue; 
     }
 
-    if ( _time / weekly >= 1 ) {
-        output.push( `${_date} ${Math.round( _time / weekly )}주` ); 
+    if ( _time / week >= 1 ) {
+        output.push( `${_date} ${Math.round( _time / week )}주` ); 
         continue;
     }
 
@@ -51,18 +51,18 @@ for ( let i = 0; i < timeList.length; i++ ) {
         continue;
     }
 
-    if ( _time / hour >= 1 ) {
-        output.push( `${_date} ${Math.round( _time / hour )}시간` );
+    if ( _time / hours >= 1 ) {
+        output.push( `${_date} ${Math.round( _time / hours )}시간` );
         continue;
     }
 
-    if ( _time / min >= 1 ) {
-        output.push( `${_date} ${Math.round( _time / min )}분` );
+    if ( _time / minute >= 1 ) {
+        output.push( `${_date} ${Math.round( _time / minute )}분` );
         continue;
     }
 
-    if ( _time / sec >= 1 ) {
-        output.push( `${_date} ${Math.round( _time / sec )}초` );
+    if ( _time / second >= 1 ) {
+        output.push( `${_date} ${Math.round( _time / second )}초` );
         continue;
     }
 }
