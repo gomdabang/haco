@@ -2,7 +2,6 @@ const inputList = document.querySelectorAll('input[name="seatId"]');
 
 // 예제1
 // 한번만 확인 
-
 function checkSeat(selectedSeat) {
     for ( let i = 0; i < inputList.length; i++ ) {
         let el = inputList[i]; 
