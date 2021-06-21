@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>294286</title>
+    <link rel="stylesheet" href="./common.css">
+    <style>
+        .box[data-hidden="true"] {
+            display: none;
+        }
+
+        .box {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 8px; 
+            box-sizing: border-box;
+            background-color: #333;
+            opacity: 0.9;
+            color: #fff;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="btn1();">Button 1</button>
+    <hr>
+    <button onclick="btn2();">Button 2</button>
+    <div class="box" data-hidden="true">
+        <button onclick="btnClose();">닫기</button>
+    </div>
+    <script>
+        const boxEl = document.querySelector('.box');
+
+        function btn1() {
+            boxEl.setAttribute('data-hidden', false);
+        } 
+
+        // 0.5초 딜레이
+        function btn2() {
+            setTimeout(function() {
+                boxEl.setAttribute('data-hidden', false);
+            }, 500);
+        } 
+
+        function btnClose() {
+            boxEl.setAttribute('data-hidden', true);
+        }
+    </script>
+</body>
+</html>
