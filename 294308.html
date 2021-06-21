@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>294308</title>
+    <link rel="stylesheet" href="./common.css">
+    <style>
+        .container {
+            position: fixed; 
+            bottom: 1em;
+            left: 1em;
+            right: 1em;
+            border: 1px solid red;
+            overflow-y: scroll;
+        }
+
+        .inner:after { content: " "; display: block; clear: both; }
+
+        .container[data-length="10"] .inner { 
+            width: 1000px; 
+        }
+
+        .item {
+            float: left; 
+            padding: 4px;
+            width: 100px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .txt {
+            display: block;
+            width: 100%;
+            height: 3em;
+            line-height: 3em;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" data-length="10">
+        <div class="inner">
+            <div class="item"><span class="txt">1</span></div>
+            <div class="item"><span class="txt">2</span></div>
+            <div class="item"><span class="txt">3</span></div>
+            <div class="item"><span class="txt">4</span></div>
+            <div class="item"><span class="txt">5</span></div>
+            <div class="item"><span class="txt">6</span></div>
+            <div class="item"><span class="txt">7</span></div>
+            <div class="item"><span class="txt">8</span></div>
+            <div class="item"><span class="txt">9</span></div>
+            <div class="item"><span class="txt">10</span></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+body {
+    font-family: 'APPLE SD Gothic NEO', 'Noto Sans CJK KR', '맑은 고딕', '돋움', sans-serif;
+    font-size: small;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: -1px;
+    -webkit-text-size-adjust:100%
+}
