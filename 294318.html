@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>294318</title>
+    <link rel="stylesheet" href="./common.css">
+    <style>
+        .test { width: 50px; height: 50px; background: white; }
+        .test.click { background: black; }
+    </style>
+</head>
+<body>
+    <div>
+         <span onclick="javascript:clickEvent(this)" class="test"> test </span>
+         <span onclick="javascript:clickEvent(this)" class="test"> test </span>
+         <span onclick="javascript:clickEvent(this)" class="test"> test </span>
+         <span onclick="javascript:clickEvent(this)" class="test"> test </span>
+         <span onclick="javascript:clickEvent(this)" class="test"> test </span>
+    </div>
+    <script>
+        function clickEvent(e){
+            const elem = e.getAttribute('class');
+            const click = 'test click';
+            
+            if(select != click){
+                alert('click클래스명 없음');
+            } else {
+                //elem.className = 'test click';
+                alert('click클래스명 있음');
+            }
+        }
+    </script>
+</body>
+</html>
